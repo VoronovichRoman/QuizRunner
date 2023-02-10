@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
-
+    [SerializeField] bool _quizOptionMode;
     [SerializeField] int _value;
     [SerializeField] DeformationType _deformationType;
     [SerializeField] GateAppearaence _gateAppearaence;
 
     private void OnValidate()
     {
-        _gateAppearaence.UpdateVisual(_deformationType, _value);
+        _gateAppearaence.UpdateVisual(_deformationType, _value, _quizOptionMode);
     }
     private void OnTriggerEnter(Collider other)
     {

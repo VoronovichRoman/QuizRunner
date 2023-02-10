@@ -579,8 +579,6 @@ MonoBehaviour:
   _value: 0
   _deformationType: 0
   _gateAppearaence: {fileID: 4953279390595512843}
-  _quizMode: 0
-  _picture: {fileID: 8790703253574744417}
 --- !u!114 &-1354871540993318058
 MonoBehaviour:
   m_ObjectHideFlags: 0

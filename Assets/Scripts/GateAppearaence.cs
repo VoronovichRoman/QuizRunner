@@ -23,50 +23,53 @@ public class GateAppearaence : MonoBehaviour
     [SerializeField] GameObject _shrinkLabel;
     [SerializeField] GameObject _upLabel;
     [SerializeField] GameObject _downLabel;
-    public void UpdateVisual(DeformationType deformationType, int value)
+    public void UpdateVisual(DeformationType deformationType, int value, bool quizOptionMode)
     {
-        string prefix = "";
-        if (value > 0)
+        if (!quizOptionMode)
         {
-            prefix = "+";
-            SetColor(_colorPositive);
-        }
-        else if (value == 0)
-        {
-            SetColor(Color.grey);
-        }
-        else
-        {
-            SetColor(_colorNegative);
-        }
-
-        _text.text = prefix + value.ToString();
-
-        _expandLabel.SetActive(false);
-        _shrinkLabel.SetActive(false);
-        _upLabel.SetActive(false);
-        _downLabel.SetActive(false);
-
-        if (deformationType == DeformationType.Width)
-        {
+            string prefix = "";
             if (value > 0)
             {
-                _expandLabel.SetActive(true);
+                prefix = "+";
+                SetColor(_colorPositive);
             }
-            else if (value < 0)
+            else if (value == 0)
             {
-                _shrinkLabel.SetActive(true);
+                SetColor(Color.grey);
             }
-        }
-        else if(deformationType == DeformationType.Height)
-        {
-            if (value > 0)
+            else
             {
-                _upLabel.SetActive(true);
+                SetColor(_colorNegative);
             }
-            else if (value < 0)
+
+            _text.text = prefix + value.ToString();
+
+            _expandLabel.SetActive(false);
+            _shrinkLabel.SetActive(false);
+            _upLabel.SetActive(false);
+            _downLabel.SetActive(false);
+
+            if (deformationType == DeformationType.Width)
             {
-                _downLabel.SetActive(true);
+                if (value > 0)
+                {
+                    _expandLabel.SetActive(true);
+                }
+                else if (value < 0)
+                {
+                    _shrinkLabel.SetActive(true);
+                }
+            }
+            else if (deformationType == DeformationType.Height)
+            {
+                if (value > 0)
+                {
+                    _upLabel.SetActive(true);
+                }
+                else if (value < 0)
+                {
+                    _downLabel.SetActive(true);
+                }
             }
         }
     }
