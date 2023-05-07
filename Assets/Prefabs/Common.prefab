@@ -571,7 +571,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1395343387
 MonoBehaviour:
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c101834cac710f46b9a7fb209404bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinManager: {fileID: 4883384670141295893}
+  _coinManager: {fileID: 0}
 --- !u!1 &1578154464
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ RectTransform:
   m_Children:
   - {fileID: 1603265034}
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1253,7 +1253,7 @@ RectTransform:
   - {fileID: 4883384669622483893}
   - {fileID: 4883384669184732838}
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1990,7 +1990,7 @@ RectTransform:
   - {fileID: 4883384668366531894}
   - {fileID: 1176573177}
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2089,7 +2089,6 @@ Transform:
   - {fileID: 4883384668999106094}
   - {fileID: 4883384668584855728}
   - {fileID: 4883384669113383980}
-  - {fileID: 4883384670141295892}
   - {fileID: 4883384669848866495}
   - {fileID: 4883384669975418247}
   - {fileID: 4883384668950155442}
@@ -2131,7 +2130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4883384669975418248
 MonoBehaviour:
@@ -2379,52 +2378,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &4883384670141295894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4883384670141295892}
-  - component: {fileID: 4883384670141295893}
-  m_Layer: 0
-  m_Name: CoinManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4883384670141295892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883384670141295894}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4883384670141295893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4883384670141295894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f78888bb7ebf90a4c808d185bb10c9ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NumberOfCoins: 0
-  _text: {fileID: 4883384668366531893}
 --- !u!1 &4883384670166283878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2408,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4883384670166283876
 MonoBehaviour:
@@ -2472,7 +2425,7 @@ MonoBehaviour:
   _startMenu: {fileID: 4883384668950155446}
   _levelText: {fileID: 1176573178}
   _finishWindow: {fileID: 1578154464}
-  _coinManager: {fileID: 4883384670141295893}
+  _coinManager: {fileID: 0}
 --- !u!1 &4883384670302692244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2591,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883384669885476229}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3711021037635664352
 MonoBehaviour:
