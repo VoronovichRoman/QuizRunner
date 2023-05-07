@@ -6,13 +6,14 @@ public class PlayerModifier : MonoBehaviour
 {
     [SerializeField] int _width;
     [SerializeField] int _height;
-    float _widthMultiplier = 0.0005f;
-    float _heightMultiplier = 0.006f;
     [SerializeField] Renderer _renderer;
     [SerializeField] Transform _topSpine;
     [SerializeField] Transform _bottomSpine;
     [SerializeField] Transform _colliderTransform;
     [SerializeField] AudioSource _increaseSound;
+
+    float _widthMultiplier = 0.0005f;
+    float _heightMultiplier = 0.006f;
     private void Start()
     {
         SetWidth(Progress.Instance.Width);
@@ -20,23 +21,23 @@ public class PlayerModifier : MonoBehaviour
     }
     void Update()
     {      
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            AddWidth(50);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            AddHeight(50);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            AddWidth(-50);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            AddHeight(-50);
-        }
+        //TestMode
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    AddWidth(50);
+        //}
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    AddHeight(50);
+        //}
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    AddWidth(-50);
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    AddHeight(-50);
+        //}
     }
 
     public void AddWidth(int value)

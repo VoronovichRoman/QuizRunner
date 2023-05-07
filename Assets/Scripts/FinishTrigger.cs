@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishTrigger : MonoBehaviour
 {
@@ -10,7 +11,14 @@ public class FinishTrigger : MonoBehaviour
         if (playerBehaviour)
         {
             playerBehaviour.StartFinishBehaviour();
-            FindObjectOfType<GameManager>().ShowFinishWindow();
+            if (SceneManager.GetActiveScene().name.Contains("Quiz"))
+            {
+                FindObjectOfType<QuizManager>().ShowFinishWindow();
+            }
+            else
+            {
+                FindObjectOfType<GameManager>().ShowFinishWindow();
+            }
         }
     }
 }

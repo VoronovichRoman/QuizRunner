@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c101834cac710f46b9a7fb209404bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinManager: {fileID: 0}
+  _coinManager: {fileID: 5276516109264893813}
 --- !u!1 &1578154464
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +765,52 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &871391251162905238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6823978266688644430}
+  - component: {fileID: 5276516109264893813}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6823978266688644430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871391251162905238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4883384669885476229}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5276516109264893813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871391251162905238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78888bb7ebf90a4c808d185bb10c9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfCoins: 0
+  _text: {fileID: 4883384668366531893}
 --- !u!1 &4883384668366531895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,6 +2142,7 @@ Transform:
   - {fileID: 1578154468}
   - {fileID: 1350222897114106377}
   - {fileID: 1395343388}
+  - {fileID: 6823978266688644430}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2425,7 +2472,7 @@ MonoBehaviour:
   _startMenu: {fileID: 4883384668950155446}
   _levelText: {fileID: 1176573178}
   _finishWindow: {fileID: 1578154464}
-  _coinManager: {fileID: 0}
+  _coinManager: {fileID: 5276516109264893813}
 --- !u!1 &4883384670302692244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,3 +2655,4 @@ MonoBehaviour:
   Coins: 0
   Width: 0
   Height: 0
+  QuizScore: 0

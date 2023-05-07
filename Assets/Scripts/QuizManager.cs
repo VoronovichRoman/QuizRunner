@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class QuizManager : MonoBehaviour
 {
     [SerializeField] GameObject _startMenu;
-    [SerializeField] TextMeshProUGUI _levelTask;
+    [SerializeField] TextMeshProUGUI _finishText;
     [SerializeField] GameObject _finishWindow;
 
     public void Play()
