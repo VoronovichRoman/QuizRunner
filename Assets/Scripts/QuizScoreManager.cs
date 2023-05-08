@@ -22,7 +22,7 @@ public class QuizScoreManager : MonoBehaviour
 
     public float GettingPuzzlePiece()
     {
-        float value = (ÑorrectAnswers / _maxCorrectAnswers) * 100;
+        float value = (ÑorrectAnswers - IncorrectAnswers) / _maxCorrectAnswers * 100;
         if (value >= _percentageOfCorrectness)
         {
             return 1;
