@@ -43,7 +43,7 @@ EditorBuildSettings:
     guid: 3d604fc1b3a94bf459f20c492d4c5363
   - enabled: 1
     path: Assets/Scenes/Quiz_Astronomy_SolarSystem.unity
-    guid: 3617c3d9152bccc49988d09e02325583
+    guid: 3ccaed33ac55e3d41a899eac4e799cf8
   - enabled: 1
     path: Assets/Scenes/Quiz_Geography_GuessTheCity.unity
     guid: 022c14a6b82b7f2418424edd30d49a70
