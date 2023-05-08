@@ -9,9 +9,17 @@ public class Gate : MonoBehaviour
     [SerializeField] DeformationType _deformationType;
     [SerializeField] GateAppearaence _gateAppearaence;
 
+    QuizScoreManager _quizScoreManager;
     private void OnValidate()
     {
-        _gateAppearaence.UpdateVisual(_deformationType, _value, _quizOptionMode);
+        if (_quizOptionMode)
+        {
+            _quizScoreManager = FindObjectOfType<QuizScoreManager>();
+        }
+        else
+        {
+            _gateAppearaence.UpdateVisual(_deformationType, _value);
+        }        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +29,10 @@ public class Gate : MonoBehaviour
             if (_deformationType == DeformationType.Width)
             {
                 playerModifier.AddWidth(_value);
+                if (_quizOptionMode)
+                {
+                    _quizScoreManager.ScoreCount(_value);
+                }
             }
             else if (_deformationType == DeformationType.Height)
             {

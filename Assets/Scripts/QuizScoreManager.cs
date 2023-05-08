@@ -4,11 +4,32 @@ using UnityEngine;
 
 public class QuizScoreManager : MonoBehaviour
 {
-    [SerializeField] PlayerModifier _player;
+    [SerializeField] int _maxCorrectAnswers;
+    [SerializeField] float _percentageOfCorrectness;
+    public float ÑorrectAnswers;
+    public float IncorrectAnswers;
+    public void ScoreCount(int value)
+    {
+        if (value > 0)
+        {
+            ÑorrectAnswers++;
+        }
+        else if (value < 0)
+        {
+            IncorrectAnswers++;
+        }
+    }
 
-    public int ÑorrectAnswer;
-    public int IncorrectAnswer;
-
-
-
+    public float GettingPuzzlePiece()
+    {
+        float value = (ÑorrectAnswers / _maxCorrectAnswers) * 100;
+        if (value >= _percentageOfCorrectness)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }

@@ -10,7 +10,7 @@ public class PlayerModifier : MonoBehaviour
     [SerializeField] Transform _topSpine;
     [SerializeField] Transform _bottomSpine;
     [SerializeField] Transform _colliderTransform;
-    [SerializeField] AudioSource _increaseSound;
+    [SerializeField] AudioSource _resizeSound;
 
     float _widthMultiplier = 0.0005f;
     float _heightMultiplier = 0.006f;
@@ -44,10 +44,7 @@ public class PlayerModifier : MonoBehaviour
     {
         _width += value;
         UpdateWidth();
-        if (value > 0)
-        {
-            _increaseSound.Play();
-        }
+        _resizeSound.Play();
         if (_width < -100)
         {
             Die();
@@ -57,10 +54,7 @@ public class PlayerModifier : MonoBehaviour
     {
         _height += value;
         UpdateHeight();
-        if (value > 0)
-        {
-            _increaseSound.Play();
-        }
+        _resizeSound.Play();
         if (_height < -100)
         {
             Die();
@@ -76,7 +70,6 @@ public class PlayerModifier : MonoBehaviour
         _height = value;
         UpdateHeight();
     }
-
     public void HitBlock(int value)
     {
         if (_height > 0)

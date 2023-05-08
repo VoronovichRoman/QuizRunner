@@ -5284,7 +5284,7 @@ MonoBehaviour:
   _topSpine: {fileID: 1624465631308857947}
   _bottomSpine: {fileID: 740851520786018670}
   _colliderTransform: {fileID: 8805187065574917668}
-  _increaseSound: {fileID: 5309544209760777608}
+  _resizeSound: {fileID: 5309544209760777608}
 --- !u!114 &8805187064775140601
 MonoBehaviour:
   m_ObjectHideFlags: 0
