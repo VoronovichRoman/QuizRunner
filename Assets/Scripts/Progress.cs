@@ -7,7 +7,6 @@ public class Progress : MonoBehaviour
     public int Coins;
     public int Width;
     public int Height;
-    public int QuizScore;
 
     public static Progress Instance;
     private void Awake()

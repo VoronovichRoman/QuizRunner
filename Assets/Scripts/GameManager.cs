@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _levelText;
     [SerializeField] GameObject _finishWindow;
     [SerializeField] CoinManager _coinManager;
+    [SerializeField] TextMeshProUGUI _finishText;
     private void Start()
     {
         _levelText.text = SceneManager.GetActiveScene().name;
@@ -23,19 +24,23 @@ public class GameManager : MonoBehaviour
     public void ShowFinishWindow()
     {
         _finishWindow.SetActive(true);
+        _finishText.text = "Level finished!\nEarned Diamonds: " + (_coinManager.NumberOfCoins / 10);
     }
     public void NextLevel()
     {
         int next = SceneManager.GetActiveScene().buildIndex + 1;
-        if (next < SceneManager.sceneCountInBuildSettings)
+        if (next < 10)
         {
             _coinManager.SaveToProgress();
 
             SceneManager.LoadScene(next);
-        }       
-    }   
-    public void ExitGame()
+        }
+    }
+    public void GoToMainMenu()
     {
-        Application.Quit();
+        Progress.Instance.Coins = 0;
+        Progress.Instance.Height = 0;
+        Progress.Instance.Width = 0;
+        SceneManager.LoadScene("MainMenu");        
     }
 }

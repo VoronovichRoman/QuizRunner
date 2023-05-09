@@ -35,6 +35,7 @@ public class QuizManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        PlayerAccount.PuzzlePiecesCount += (int)_finishScore.GettingPuzzlePiece();
         SceneManager.LoadScene("MainMenu");
     }
 }

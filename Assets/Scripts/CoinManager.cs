@@ -27,4 +27,9 @@ public class CoinManager : MonoBehaviour
         NumberOfCoins-=value;
         _text.text = NumberOfCoins.ToString();
     }
+
+    public void ConvertToDiamonds()
+    {
+        PlayerAccount.DiamondsCount += NumberOfCoins / 10;
+    }
 }

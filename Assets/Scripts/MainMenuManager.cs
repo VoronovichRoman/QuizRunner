@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI _diamondsCountText;
+    [SerializeField] TextMeshProUGUI _puzzlePiecesCountText;
+    private void Start()
+    {
+        PlayerAccount.LoadAccount();
+        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString();
+       _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString();
+    }
     public void StartGame(string gameMode)
     {
         switch (gameMode)
@@ -28,6 +37,13 @@ public class MainMenuManager : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerAccount.LoadAccount();
+        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString();
+        _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString();
     }
     public void ExitGame()
     {
