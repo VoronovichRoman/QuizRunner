@@ -9,9 +9,13 @@ public static class PlayerAccount
     static int _isSolarSystemQuizBought;
     static int _isVanGoghQuizBought;
     static int _isLouvreQuizBought;
+    static string _collection_1;
 
+    static public List<bool> Collection_1Values;
+    
     public static void LoadAccount()
     {
+        Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
         if (PlayerPrefs.HasKey("DiamondsCount"))
         {
             DiamondsCount = PlayerPrefs.GetInt("DiamondsCount");
@@ -19,14 +23,33 @@ public static class PlayerAccount
             IsSolarSystemQuizBought = PlayerPrefs.GetInt("IsSolarSystemQuizBought");
             IsVanGoghQuizBought = PlayerPrefs.GetInt("IsVanGoghQuizBought");
             IsLouvreQuizBought = PlayerPrefs.GetInt("IsLouvreQuizBought");
+            Collection_1 = PlayerPrefs.GetString("Collection_1");
+           // Collection_1 = "111111111";
+            char[] chars =  Collection_1.ToCharArray();
+            Debug.Log("jhnorfgoik");
+            for (int i = 0; i < 9; i++)
+            {
+                if (chars[i] == '1')
+                {
+                    Debug.Log("Uno");
+                    Collection_1Values[i] = true;
+                }
+                else
+                {
+                    Debug.Log("ds");
+                    Collection_1Values[i] = false;
+                }
+            }
         }
         else
         {
-            DiamondsCount = 0;
-            PuzzlePiecesCount = 0;
+            DiamondsCount = 10;
+            PuzzlePiecesCount =10;
             IsSolarSystemQuizBought = 0;
             IsVanGoghQuizBought = 0;
             IsLouvreQuizBought = 0;
+            Collection_1 = "111111111";
+            Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
         }
     }
     public static int DiamondsCount
@@ -77,6 +100,13 @@ public static class PlayerAccount
             PlayerPrefs.SetInt("IsSolarSystemQuizBought", IsLouvreQuizBought);
         }
     }
-
-
+    public static string Collection_1
+    {
+        get { return _collection_1; }
+        set
+        {
+            _collection_1 = value;
+            PlayerPrefs.SetString("Collection_1", Collection_1);
+        }
+    }
 }
