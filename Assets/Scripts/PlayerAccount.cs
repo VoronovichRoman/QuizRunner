@@ -24,7 +24,7 @@ public static class PlayerAccount
             IsVanGoghQuizBought = PlayerPrefs.GetInt("IsVanGoghQuizBought");
             IsLouvreQuizBought = PlayerPrefs.GetInt("IsLouvreQuizBought");
             Collection_1 = PlayerPrefs.GetString("Collection_1");
-           // Collection_1 = "111111111";
+
             char[] chars =  Collection_1.ToCharArray();
             Debug.Log("jhnorfgoik");
             for (int i = 0; i < 9; i++)
@@ -49,7 +49,6 @@ public static class PlayerAccount
             IsVanGoghQuizBought = 0;
             IsLouvreQuizBought = 0;
             Collection_1 = "111111111";
-            //Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
         }
     }
     public static int DiamondsCount

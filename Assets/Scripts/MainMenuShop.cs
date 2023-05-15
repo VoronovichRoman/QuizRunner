@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainMenuShop : MonoBehaviour
 {
     [SerializeField] int _price;
+    [SerializeField] MainMenuManager _mainMenuManager;
     [Header("BuyAndQuizButtons")]
     [SerializeField] GameObject _solarSystemBuyButton;
     [SerializeField] Button _solarSystemQuizButton;
@@ -19,19 +20,28 @@ public class MainMenuShop : MonoBehaviour
     {
         if (_price <= PlayerAccount.DiamondsCount)
         {
+            string category = "";
             PlayerAccount.DiamondsCount -= _price;
-        }
-        switch (quizName)
-        {
-            case "SolarSystem":
-                PlayerAccount.IsSolarSystemQuizBought = 1;
-                break;
-            case "VanGogh":
-                PlayerAccount.IsVanGoghQuizBought= 1;
-                break ;
-            case "louvre":
-                PlayerAccount.IsLouvreQuizBought = 1;
-                break;
+
+            switch (quizName)
+            {
+                case "SolarSystem":
+                    PlayerAccount.IsSolarSystemQuizBought = 1;
+                    category = "Astronomy";
+                    break;
+                case "VanGogh":
+                    PlayerAccount.IsVanGoghQuizBought = 1;
+                    category = "Art";
+                    break;
+                case "louvre":
+                    PlayerAccount.IsLouvreQuizBought = 1;
+                    category = "Art";
+                    break;
+                default:
+                    break;
+            }
+            PurchasedQuizzesCheck(category);
+            _mainMenuManager.LoadAccount();
         }
     }
     public void PurchasedQuizzesCheck(string category)
@@ -70,6 +80,8 @@ public class MainMenuShop : MonoBehaviour
                     _louvreQuizButton.interactable = true;
                     _louvreBuyButton.SetActive(false);
                 }
+                break;                
+            default:
                 break;
         }
     }
@@ -93,6 +105,7 @@ public class MainMenuShop : MonoBehaviour
                 }
             }
             CollectionPartsCheck();
+            _mainMenuManager.LoadAccount();
         }
     }
 
@@ -102,6 +115,5 @@ public class MainMenuShop : MonoBehaviour
         {
             _collection_1Parts[i].SetActive(PlayerAccount.Collection_1Values[i]);
         }
-        Debug.Log("Check");
     }
 }

@@ -11,9 +11,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _puzzlePiecesCountText;
     private void Start()
     {
-        PlayerAccount.LoadAccount();
-        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString() + " x ";
-        _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString() + " x ";
+        LoadAccount();
     }
     public void StartGame(string gameMode)
     {
@@ -41,9 +39,14 @@ public class MainMenuManager : MonoBehaviour
     public void DeleteData()
     {
         PlayerPrefs.DeleteAll();
+        LoadAccount();
+    }
+
+    public void LoadAccount()
+    {
         PlayerAccount.LoadAccount();
-        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString();
-        _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString();
+        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString() + " x ";
+        _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString() + " x ";
     }
     public void ExitGame()
     {
