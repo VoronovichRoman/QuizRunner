@@ -43,13 +43,13 @@ public static class PlayerAccount
         }
         else
         {
-            DiamondsCount = 10;
-            PuzzlePiecesCount =10;
+            DiamondsCount = 0;
+            PuzzlePiecesCount = 0;
             IsSolarSystemQuizBought = 0;
             IsVanGoghQuizBought = 0;
             IsLouvreQuizBought = 0;
             Collection_1 = "111111111";
-            Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
+            //Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
         }
     }
     public static int DiamondsCount

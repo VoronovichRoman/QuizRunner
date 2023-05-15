@@ -12,8 +12,8 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         PlayerAccount.LoadAccount();
-        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString();
-       _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString();
+        _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString() + " x ";
+        _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString() + " x ";
     }
     public void StartGame(string gameMode)
     {
