@@ -10,7 +10,18 @@ public class Gate : MonoBehaviour
     [SerializeField] GateAppearaence _gateAppearaence;
 
     QuizScoreManager _quizScoreManager;
-    private void OnValidate()
+    //private void OnValidate()
+    //{
+    //    if (_quizOptionMode)
+    //    {
+    //        //_quizScoreManager = FindObjectOfType<QuizScoreManager>();
+    //    }
+    //    else
+    //    {
+    //        _gateAppearaence.UpdateVisual(_deformationType, _value);
+    //    }
+    //}
+    private void Awake()
     {
         if (_quizOptionMode)
         {

@@ -576,9 +576,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199290ff283e4f94fab60f96226d019f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quizOptionMode: 0
   _value: 0
   _deformationType: 0
   _gateAppearaence: {fileID: 4953279390595512843}
+  _quizScoreManager: {fileID: 4283788892076890157, guid: a9c2053fe4e209c47ae33bc3b219fd0d,
+    type: 3}
 --- !u!114 &-1354871540993318058
 MonoBehaviour:
   m_ObjectHideFlags: 0

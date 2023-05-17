@@ -7,8 +7,8 @@ public class QuizScoreManager : MonoBehaviour
     [SerializeField] int _maxCorrectAnswers;
     [SerializeField] float _percentageOfCorrectness;
 
-    public float ÑorrectAnswers;
-    public float IncorrectAnswers;
+    float _correctAnswers;
+    float _incorrectAnswers;
     public void ScoreCount(int value)
     {
         if (value > 0)
@@ -31,5 +31,15 @@ public class QuizScoreManager : MonoBehaviour
         {
             return 0;
         }
+    }
+    public float ÑorrectAnswers
+    {
+        get { return _correctAnswers; }
+        set { _correctAnswers = value; }
+    }
+    public float IncorrectAnswers
+    {
+        get { return _incorrectAnswers; }
+        set { _incorrectAnswers = value; }
     }
 }

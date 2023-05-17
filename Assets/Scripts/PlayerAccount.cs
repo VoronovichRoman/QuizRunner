@@ -39,8 +39,8 @@ public static class PlayerAccount
         }
         else
         {
-            DiamondsCount = 0;
-            PuzzlePiecesCount = 0;
+            DiamondsCount = 10;
+            PuzzlePiecesCount = 3;
             IsSolarSystemQuizBought = 0;
             IsVanGoghQuizBought = 0;
             IsLouvreQuizBought = 0;

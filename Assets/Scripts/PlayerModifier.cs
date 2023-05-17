@@ -21,23 +21,7 @@ public class PlayerModifier : MonoBehaviour
     }
     void Update()
     {
-        //TestMode
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    AddWidth(50);
-        //}
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    AddHeight(50);
-        //}
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    AddWidth(-50);
-        //}
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    AddHeight(-50);
-        //}
+        //TestSizeChange();
     }
     public void AddWidth(int value)
     {
@@ -104,5 +88,24 @@ public class PlayerModifier : MonoBehaviour
     {
         FindObjectOfType<GameManager>().ShowFinishWindow();
         Destroy(gameObject);
+    }
+    void TestSizeChange()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            AddWidth(50);
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            AddHeight(50);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            AddWidth(-50);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            AddHeight(-50);
+        }
     }
 }
