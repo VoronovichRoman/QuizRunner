@@ -27,7 +27,7 @@ public class MainMenuManager : MonoBehaviour
                 SceneManager.LoadScene("Quiz_Astronomy_SolarSystem");
                 break;
             case "Van Gogh":
-                SceneManager.LoadScene("Quiz_Art_VanGogh"); 
+                SceneManager.LoadScene("Quiz_Art_VanGogh");
                 break;
             case "Louvre":
                 SceneManager.LoadScene("Quiz_Art_LouvrePaintings");
@@ -41,7 +41,6 @@ public class MainMenuManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         LoadAccount();
     }
-
     public void LoadAccount()
     {
         PlayerAccount.LoadAccount();

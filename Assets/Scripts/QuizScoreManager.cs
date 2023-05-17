@@ -6,6 +6,7 @@ public class QuizScoreManager : MonoBehaviour
 {
     [SerializeField] int _maxCorrectAnswers;
     [SerializeField] float _percentageOfCorrectness;
+
     public float ÑorrectAnswers;
     public float IncorrectAnswers;
     public void ScoreCount(int value)
@@ -19,7 +20,6 @@ public class QuizScoreManager : MonoBehaviour
             IncorrectAnswers++;
         }
     }
-
     public float GettingPuzzlePiece()
     {
         float value = (ÑorrectAnswers - IncorrectAnswers) / _maxCorrectAnswers * 100;

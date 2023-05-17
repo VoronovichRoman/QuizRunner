@@ -12,7 +12,7 @@ public class Barrier : MonoBehaviour
         {
             playerModifier.HitBlock(150);
             Destroy(gameObject);
-            Instantiate(_bricksEffectPrefab,transform.position, transform.rotation);
+            Instantiate(_bricksEffectPrefab, transform.position, transform.rotation);
         }
     }
 }

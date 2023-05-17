@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     {
         _levelText.text = SceneManager.GetActiveScene().name;
     }
-
     public void Play()
     {
         _startMenu.SetActive(false);
@@ -41,6 +40,6 @@ public class GameManager : MonoBehaviour
         Progress.Instance.Coins = 0;
         Progress.Instance.Height = 0;
         Progress.Instance.Width = 0;
-        SceneManager.LoadScene("MainMenu");        
+        SceneManager.LoadScene("MainMenu");
     }
 }

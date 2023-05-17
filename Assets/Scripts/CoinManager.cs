@@ -24,7 +24,7 @@ public class CoinManager : MonoBehaviour
     }
     public void SpendMoney(int value)
     {
-        NumberOfCoins-=value;
+        NumberOfCoins -= value;
         _text.text = NumberOfCoins.ToString();
     }
 

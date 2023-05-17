@@ -11,7 +11,7 @@ public class Progress : MonoBehaviour
     public static Progress Instance;
     private void Awake()
     {
-        if (Instance==null)
+        if (Instance == null)
         {
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
@@ -20,6 +20,6 @@ public class Progress : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }       
+        }
     }
 }

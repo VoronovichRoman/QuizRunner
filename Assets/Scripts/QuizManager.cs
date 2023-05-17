@@ -24,15 +24,13 @@ public class QuizManager : MonoBehaviour
     public void ShowFinishWindow()
     {
         _finishWindow.SetActive(true);
-        _finishText.text = "Correct: " + _finishScore.ÑorrectAnswers + "\nIncorrect: " + _finishScore.IncorrectAnswers 
+        _finishText.text = "Correct: " + _finishScore.ÑorrectAnswers + "\nIncorrect: " + _finishScore.IncorrectAnswers
             + "\nEarned fragments: " + _finishScore.GettingPuzzlePiece();
     }
-
     public void TryAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
     public void GoToMainMenu()
     {
         PlayerAccount.PuzzlePiecesCount += (int)_finishScore.GettingPuzzlePiece();

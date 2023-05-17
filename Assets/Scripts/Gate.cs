@@ -19,7 +19,7 @@ public class Gate : MonoBehaviour
         else
         {
             _gateAppearaence.UpdateVisual(_deformationType, _value);
-        }        
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

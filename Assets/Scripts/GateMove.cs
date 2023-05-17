@@ -72,7 +72,6 @@ public class GateMove : MonoBehaviour
     }
     void —ircling()
     {
-
         if (_verticalDirection == 1 && _horizontalDirection == -1)
         {
             if (!_reverse—ircling)

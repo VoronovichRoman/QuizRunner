@@ -15,6 +15,6 @@ public class CameraMove : MonoBehaviour
         if (_target)
         {
             transform.position = _target.position;
-        }        
+        }
     }
 }

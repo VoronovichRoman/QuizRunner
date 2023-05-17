@@ -8541,6 +8541,11 @@ PrefabInstance:
       propertyPath: _value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4953279390595512840, guid: 5d13090f5351a9848a814ab5f17b665c,
+        type: 3}
+      propertyPath: _quizOptionMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4953279390595512842, guid: 5d13090f5351a9848a814ab5f17b665c,
         type: 3}
       propertyPath: m_RootOrder
@@ -8643,6 +8648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5896156203135782668, guid: 5d13090f5351a9848a814ab5f17b665c,
         type: 3}
+      propertyPath: m_Size.z
+      value: 0.07586098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896156203135782668, guid: 5d13090f5351a9848a814ab5f17b665c,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -8654,7 +8664,12 @@ PrefabInstance:
     - target: {fileID: 5896156203135782668, guid: 5d13090f5351a9848a814ab5f17b665c,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.011745632
+      value: 0.011745691
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896156203135782668, guid: 5d13090f5351a9848a814ab5f17b665c,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.2041874
       objectReference: {fileID: 0}
     - target: {fileID: 6180253275867531934, guid: 5d13090f5351a9848a814ab5f17b665c,
         type: 3}
@@ -13388,7 +13403,6 @@ MonoBehaviour:
   Coins: 0
   Width: 0
   Height: 0
-  QuizScore: 0
 --- !u!1001 &8805187064561546184
 PrefabInstance:
   m_ObjectHideFlags: 0

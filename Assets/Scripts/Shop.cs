@@ -7,7 +7,6 @@ public class Shop : MonoBehaviour
     [SerializeField] CoinManager _coinManager;
 
     PlayerModifier _playerModifier;
-
     private void Start()
     {
         _playerModifier = FindObjectOfType<PlayerModifier>();
@@ -22,12 +21,11 @@ public class Shop : MonoBehaviour
             _playerModifier.SetWidth(Progress.Instance.Width);
         }
     }
-
     public void BuyHeight()
     {
         if (_coinManager.NumberOfCoins >= 50)
         {
-            _coinManager.SpendMoney(50); 
+            _coinManager.SpendMoney(50);
             Progress.Instance.Coins = _coinManager.NumberOfCoins;
             Progress.Instance.Height += 50;
             _playerModifier.SetHeight(Progress.Instance.Height);

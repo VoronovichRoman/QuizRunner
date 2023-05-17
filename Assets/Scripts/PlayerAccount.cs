@@ -12,7 +12,6 @@ public static class PlayerAccount
     static string _collection_1;
 
     static public List<bool> Collection_1Values;
-    
     public static void LoadAccount()
     {
         Collection_1Values = new List<bool>() { true, true, true, true, true, true, true, true, true };
@@ -25,18 +24,15 @@ public static class PlayerAccount
             IsLouvreQuizBought = PlayerPrefs.GetInt("IsLouvreQuizBought");
             Collection_1 = PlayerPrefs.GetString("Collection_1");
 
-            char[] chars =  Collection_1.ToCharArray();
-            Debug.Log("jhnorfgoik");
+            char[] chars = Collection_1.ToCharArray();
             for (int i = 0; i < 9; i++)
             {
                 if (chars[i] == '1')
                 {
-                    Debug.Log("Uno");
                     Collection_1Values[i] = true;
                 }
                 else
                 {
-                    Debug.Log("ds");
                     Collection_1Values[i] = false;
                 }
             }
@@ -69,7 +65,6 @@ public static class PlayerAccount
             PlayerPrefs.SetInt("PuzzlePiecesCount", PuzzlePiecesCount);
         }
     }
-
     public static int IsSolarSystemQuizBought
     {
         get { return _isSolarSystemQuizBought; }
@@ -79,24 +74,22 @@ public static class PlayerAccount
             PlayerPrefs.SetInt("IsSolarSystemQuizBought", IsSolarSystemQuizBought);
         }
     }
-
     public static int IsVanGoghQuizBought
     {
         get { return _isVanGoghQuizBought; }
         set
         {
             _isVanGoghQuizBought = value;
-            PlayerPrefs.SetInt("IsSolarSystemQuizBought", IsVanGoghQuizBought);
+            PlayerPrefs.SetInt("IsVanGoghQuizBought", IsVanGoghQuizBought);
         }
     }
-
     public static int IsLouvreQuizBought
     {
         get { return _isLouvreQuizBought; }
         set
         {
             _isLouvreQuizBought = value;
-            PlayerPrefs.SetInt("IsSolarSystemQuizBought", IsLouvreQuizBought);
+            PlayerPrefs.SetInt("IsLouvreQuizBought", IsLouvreQuizBought);
         }
     }
     public static string Collection_1

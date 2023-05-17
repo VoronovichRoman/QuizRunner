@@ -20,7 +20,7 @@ public class PlayerModifier : MonoBehaviour
         SetHeight(Progress.Instance.Height);
     }
     void Update()
-    {      
+    {
         //TestMode
         //if (Input.GetKeyDown(KeyCode.D))
         //{
@@ -39,7 +39,6 @@ public class PlayerModifier : MonoBehaviour
         //    AddHeight(-50);
         //}
     }
-
     public void AddWidth(int value)
     {
         _width += value;

@@ -33,11 +33,9 @@ public class MainMenuShop : MonoBehaviour
                     PlayerAccount.IsVanGoghQuizBought = 1;
                     category = "Art";
                     break;
-                case "louvre":
+                case "Louvre":
                     PlayerAccount.IsLouvreQuizBought = 1;
                     category = "Art";
-                    break;
-                default:
                     break;
             }
             PurchasedQuizzesCheck(category);
@@ -80,12 +78,9 @@ public class MainMenuShop : MonoBehaviour
                     _louvreQuizButton.interactable = true;
                     _louvreBuyButton.SetActive(false);
                 }
-                break;                
-            default:
                 break;
         }
     }
-
     public void OpenCollectionPart(int index)
     {
         if (PlayerAccount.PuzzlePiecesCount >= 1)
@@ -108,7 +103,6 @@ public class MainMenuShop : MonoBehaviour
             _mainMenuManager.LoadAccount();
         }
     }
-
     public void CollectionPartsCheck()
     {
         for (int i = 0; i < _collection_1Parts.Count; i++)

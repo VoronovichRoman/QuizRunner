@@ -1001,7 +1001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &211954351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1028,10 +1028,10 @@ RectTransform:
   m_Father: {fileID: 819101551}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -141.48502}
-  m_SizeDelta: {x: -1431.9, y: -401.39}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 383}
+  m_SizeDelta: {x: 488.09998, y: 678.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211954352
 MonoBehaviour:
@@ -3337,18 +3337,6 @@ MonoBehaviour:
           m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: SolarSystem
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2068484188}
-        m_TargetAssemblyTypeName: MainMenuShop, Assembly-CSharp
-        m_MethodName: PurchasedQuizzesCheck
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Astronomy
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &543027715
@@ -5780,7 +5768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1024757909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6985,18 +6973,6 @@ MonoBehaviour:
           m_StringArgument: VanGogh
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2068484188}
-        m_TargetAssemblyTypeName: MainMenuShop, Assembly-CSharp
-        m_MethodName: PurchasedQuizzesCheck
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Art
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1254195077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7052,7 +7028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1295701850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10550,18 +10526,6 @@ MonoBehaviour:
           m_StringArgument: Louvre
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2068484188}
-        m_TargetAssemblyTypeName: MainMenuShop, Assembly-CSharp
-        m_MethodName: PurchasedQuizzesCheck
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Art
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1917710245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11879,6 +11843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 10
+  _mainMenuManager: {fileID: 89229080}
   _solarSystemBuyButton: {fileID: 543027712}
   _solarSystemQuizButton: {fileID: 475921357}
   _vanGoghBuyButton: {fileID: 1254195074}
