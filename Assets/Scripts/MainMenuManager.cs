@@ -44,6 +44,10 @@ public class MainMenuManager : MonoBehaviour
     public void LoadAccount()
     {
         PlayerAccount.LoadAccount();
+        RefreshResourcesUI();
+    }
+    public void RefreshResourcesUI()
+    {
         _diamondsCountText.text = PlayerAccount.DiamondsCount.ToString() + " x ";
         _puzzlePiecesCountText.text = PlayerPrefs.GetInt("PuzzlePiecesCount").ToString() + " x ";
     }

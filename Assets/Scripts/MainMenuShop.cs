@@ -14,8 +14,8 @@ public class MainMenuShop : MonoBehaviour
     [SerializeField] Button _vanGoghQuizButton;
     [SerializeField] GameObject _louvreBuyButton;
     [SerializeField] Button _louvreQuizButton;
-    [Header("Collections")]
-    [SerializeField] List<GameObject> _collection_1Parts;
+    //[Header("Collections")]
+    //[SerializeField] List<GameObject> _collection_1Parts;
     public void BuyQuiz(string quizName)
     {
         if (_price <= PlayerAccount.DiamondsCount)
@@ -81,33 +81,33 @@ public class MainMenuShop : MonoBehaviour
                 break;
         }
     }
-    public void OpenCollectionPart(int index)
-    {
-        if (PlayerAccount.PuzzlePiecesCount >= 1)
-        {
-            PlayerAccount.PuzzlePiecesCount--;
-            PlayerAccount.Collection_1Values[index] = false;
-            PlayerAccount.Collection_1 = "";
-            foreach (var item in PlayerAccount.Collection_1Values)
-            {
-                if (item)
-                {
-                    PlayerAccount.Collection_1 += "1";
-                }
-                else
-                {
-                    PlayerAccount.Collection_1 += "0";
-                }
-            }
-            CollectionPartsCheck();
-            _mainMenuManager.LoadAccount();
-        }
-    }
-    public void CollectionPartsCheck()
-    {
-        for (int i = 0; i < _collection_1Parts.Count; i++)
-        {
-            _collection_1Parts[i].SetActive(PlayerAccount.Collection_1Values[i]);
-        }
-    }
+    //public void OpenCollectionPart(int index)
+    //{
+    //    if (PlayerAccount.PuzzlePiecesCount >= 1)
+    //    {
+    //        PlayerAccount.PuzzlePiecesCount--;
+    //        PlayerAccount.Collection_1Values[index] = false;
+    //        PlayerAccount.Collection_1 = "";
+    //        foreach (var item in PlayerAccount.Collection_1Values)
+    //        {
+    //            if (item)
+    //            {
+    //                PlayerAccount.Collection_1 += "1";
+    //            }
+    //            else
+    //            {
+    //                PlayerAccount.Collection_1 += "0";
+    //            }
+    //        }
+    //        CollectionPartsCheck();
+    //        _mainMenuManager.LoadAccount();
+    //    }
+    //}
+    //public void CollectionPartsCheck()
+    //{
+    //    for (int i = 0; i < _collection_1Parts.Count; i++)
+    //    {
+    //        _collection_1Parts[i].SetActive(PlayerAccount.Collection_1Values[i]);
+    //    }
+    //}
 }
